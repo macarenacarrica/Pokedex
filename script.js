@@ -8,7 +8,7 @@ fetch(url)
     return response.json(); // Parsear la respuesta como JSON
   })
   .then(data => {
-    console.log(data); // Aquí puedes trabajar con los datos
+    console.log(data); 
   })
   .catch(error => {
     console.error('Hubo un problema con la solicitud:', error);
