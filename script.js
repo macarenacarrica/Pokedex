@@ -20,7 +20,7 @@ searchButton.addEventListener('click', () => {
             document.getElementById('pokemonID').textContent = 'ID: ' + data.id;
             document.getElementById('pokemonType').textContent = 'Tipo: ' + data.types.map(type => type.type.name).join(', ');
             document.getElementById('pokemonHeight').textContent = 'Altura: ' + (data.height / 10).toFixed(2) + ' m';
-            document.getElementById('pokemonWeight').textContent = 'Peso: ' + (data.weight / 10).toFixed(2) + ' k';
+            document.getElementById('pokemonWeight').textContent = 'Peso: ' + (data.weight / 10).toFixed(2) + ' kg';
 
 
             const abilities = data.abilities.map(ability => ability.ability.name).join(', ');
