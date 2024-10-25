@@ -1,15 +1,56 @@
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; 
-    width: 100%;
-    margin-top: 5%;
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url('pokemon-background.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+  animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 0%;
   }
-  input.form-control {
-    width: 300px;      
-    height: 40px;      
-    font-size: 16px;   
-    padding: 5px;      
-    border-radius: 5px; 
-    border: 1px solid #ccc; 
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; 
+  width: 100%;
+  margin-top: 5%;
+}
+#searchButton{
+  background-color: rgb(224, 184, 184);
+  border-radius: 10px;
+  border-color: red;
+}
+
+input.form-control {
+  width: 300px;      
+  height: 40px;      
+  font-size: 16px;   
+  padding: 5px;      
+  border-radius: 5px; 
+  border: 1px solid #c2c50a; 
+}
+
+#pokemonCard {
+  display: none; 
+  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.0); 
+  border: 2px solid red; 
+  border-radius: 20px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin: auto; 
+  backdrop-filter: blur(10px); 
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
 }
